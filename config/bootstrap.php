@@ -20,6 +20,7 @@ Configure::write('App.CakeFest2016', [
 
 EventManager::instance()->on(new Event\SSEListener());
 EventManager::instance()->on(new Event\LookupListener());
+EventManager::instance()->on(new Event\FilesystemListener($loop));
 EventManager::instance()->on(new Event\DNSListener($resolver));
 EventManager::instance()->on(new Event\GeoIPListener($httpClient));
 EventManager::instance()->on(new Event\TitleListener($httpClient));
