@@ -1,0 +1,26 @@
+{
+    "type":"cakephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com",
+            "homepage": "http://wyrihaximus.net/"
+        }
+    ],
+    "require": {
+        "php": "^5.4||^7.0",
+        "cakephp/cakephp": "~3.0",
+        "react/dns": "^0.4.1",
+        "wyrihaximus/react-guzzle-psr7": "^1.0",
+        "react/http": "^0.4.0",
+        "react/filesystem": "dev-master",
+        "clue/sse-react": "dev-master"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "WyriHaximus\\CakeFest2016\\": "src/"
+        }
+    }
+}
