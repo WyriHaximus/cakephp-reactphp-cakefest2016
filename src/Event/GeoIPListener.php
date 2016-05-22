@@ -27,7 +27,7 @@ class GeoIPListener implements EventListenerInterface
         ];
     }
 
-    public function request(LookupEvent $event)
+    public function lookup(LookupEvent $event)
     {
         $this->httpClient->getAsync('https://freegeoip.net/json/' . $event->getHostname())->then(function (ResponseInterface $response) {
             EventManager::instance()->dispatch(BroadcastEvent::create([

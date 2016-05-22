@@ -27,7 +27,7 @@ class DNSListener implements EventListenerInterface
         ];
     }
 
-    public function request(LookupEvent $event)
+    public function lookup(LookupEvent $event)
     {
         $this->resolver->resolve($event->getHostname())->then(function ($ip) {
             EventManager::instance()->dispatch(BroadcastEvent::create([

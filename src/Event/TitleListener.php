@@ -27,7 +27,7 @@ class TitleListener implements EventListenerInterface
         ];
     }
 
-    public function request(LookupEvent $event)
+    public function lookup(LookupEvent $event)
     {
         $this->httpClient->getAsync('https://' . $event->getHostname())->then(function (ResponseInterface $response) {
             if (preg_match('/<title>(.+)<\/title>/', $response->getBody()->getContents(), $matches) && isset($matches[1])) {
