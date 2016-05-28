@@ -3,7 +3,8 @@
 ## Install ##
 
 * Clone this repository into your apps `plugins` directory: `git clone git@github.com:WyriHaximus/cakephp-reactphp-cakefest2016.git CakephpReactphpCakefest2016`
-* Load it in `app/bootstrap.php`: 
+* Load it in `app/bootstrap.php`:
+
 ```php
 Plugin::load('WyriHaximus/CakeFest2016', [
     'bootstrap' => true,
