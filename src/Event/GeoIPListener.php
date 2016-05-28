@@ -34,6 +34,11 @@ class GeoIPListener implements EventListenerInterface
                 'type' => 'geo',
                 'payload' => json_decode($response->getBody()->getContents())->region_name,
             ]));
+        }, function () use ($event) {
+            EventManager::instance()->dispatch(BroadcastEvent::create([
+                'type' => 'geo',
+                'payload' => 'NO LOCATION FOUND',
+            ]));
         });
     }
 }
