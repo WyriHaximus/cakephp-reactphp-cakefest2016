@@ -8,7 +8,7 @@ use React\Http\Response;
 
 class LookupEvent extends Event
 {
-    const EVENT = 'WyriHaximus.CakeFest2016.broadcast';
+    const EVENT = 'WyriHaximus.CakeFest2016.lookup';
 
     public static function create($hostname)
     {
@@ -17,6 +17,6 @@ class LookupEvent extends Event
 
     public function getHostname()
     {
-        return $this->data();
+        return $this->data()[0];
     }
 }

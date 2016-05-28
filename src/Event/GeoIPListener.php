@@ -31,8 +31,8 @@ class GeoIPListener implements EventListenerInterface
     {
         $this->httpClient->getAsync('https://freegeoip.net/json/' . $event->getHostname())->then(function (ResponseInterface $response) {
             EventManager::instance()->dispatch(BroadcastEvent::create([
-                'type' => 'geoip',
-                'data' => json_decode($response->getBody()->getContents()),
+                'type' => 'geo',
+                'payload' => json_decode($response->getBody()->getContents())->region_name,
             ]));
         });
     }

@@ -31,8 +31,13 @@ class DNSListener implements EventListenerInterface
     {
         $this->resolver->resolve($event->getHostname())->then(function ($ip) {
             EventManager::instance()->dispatch(BroadcastEvent::create([
-                'type' => 'ip',
-                'data' => $ip,
+                'type' => 'dns',
+                'payload' => $ip,
+            ]));
+        }, function () {
+            EventManager::instance()->dispatch(BroadcastEvent::create([
+                'type' => 'dns',
+                'payload' => 'IP TITLE FOUND',
             ]));
         });
     }

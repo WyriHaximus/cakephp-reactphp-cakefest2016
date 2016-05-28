@@ -33,14 +33,19 @@ class TitleListener implements EventListenerInterface
             if (preg_match('/<title>(.+)<\/title>/', $response->getBody()->getContents(), $matches) && isset($matches[1])) {
                 EventManager::instance()->dispatch(BroadcastEvent::create([
                     'type' => 'title',
-                    'data' => $matches[1],
+                    'payload' => $matches[1],
                 ]));
                 return;
             }
 
             EventManager::instance()->dispatch(BroadcastEvent::create([
                 'type' => 'title',
-                'data' => 'NO TITLE FOUND',
+                'payload' => 'NO TITLE FOUND',
+            ]));
+        })->then(null, function () {
+            EventManager::instance()->dispatch(BroadcastEvent::create([
+                'type' => 'title',
+                'payload' => 'TITLE FETCH FAILED',
             ]));
         });
     }
