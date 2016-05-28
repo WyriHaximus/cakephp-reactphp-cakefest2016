@@ -18,7 +18,7 @@ Plugin::load('WyriHaximus/CakeFest2016', [
 
 ## License ##
 
-Copyright 2015 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
+Copyright 2016 [Cees-Jan Kiewiet](http://wyrihaximus.net/)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
