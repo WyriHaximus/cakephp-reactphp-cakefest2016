@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a32d03f240f1f2b20c8b710fd57ac85d",
+    "hash": "08813c572773a490a0056b43b6fc9aa5",
     "content-hash": "a7eb864a37ea190cdfa645274f6e10fa",
     "packages": [
         {
@@ -128,16 +128,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.2.9",
+            "version": "3.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "b98b14de4fea83f20023143ab7712fcfda23da8e"
+                "reference": "f8f48386f77f3638c4686d9f7ec6ee3b5ac52a68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/b98b14de4fea83f20023143ab7712fcfda23da8e",
-                "reference": "b98b14de4fea83f20023143ab7712fcfda23da8e",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/f8f48386f77f3638c4686d9f7ec6ee3b5ac52a68",
+                "reference": "f8f48386f77f3638c4686d9f7ec6ee3b5ac52a68",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-05-17 02:15:10"
+            "time": "2016-05-26 08:22:04"
         },
         {
             "name": "cakephp/chronos",

@@ -16,7 +16,6 @@
         "react/http": "^0.4.0",
         "react/filesystem": "dev-master",
         "clue/sse-react": "dev-master"
-
     },
     "autoload": {
         "psr-4": {
