@@ -3,6 +3,7 @@
 ## Install ##
 
 * Clone this repository into your apps `plugins` directory: `git clone git@github.com:WyriHaximus/cakephp-reactphp-cakefest2016.git CakephpReactphpCakefest2016`
+* Copy the require section from the included `composer.json` into your own, excluding `php` and `cakephp/cakephp`
 * Load it in `app/bootstrap.php`:
 
 ```php
